@@ -1,0 +1,85 @@
+{
+  "generatedAt": "2026-10-09T15:37:13.299Z",
+  "availableDates": [
+    "20261008",
+    "20261009"
+  ],
+  "entries": {
+    "20261008": {
+      "date": "20261008",
+      "word": "chévere",
+      "phonetic": "CHEH-veh-reh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "cool; awesome; alright",
+          "connotation": "slang / positive",
+          "images": [],
+          "examples": [
+            {
+              "es": "¿Todo bien? — Sí, chévere.",
+              "en": "Everything good? — Yeah, cool.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261009": {
+      "date": "20261009",
+      "word": "cuchillo",
+      "phonetic": "koo-CHEE-yo",
+      "audio": [
+        {
+          "src": "words/20261009/DR.wav",
+          "label": "DR"
+        },
+        {
+          "src": "words/20261009/PR.wav",
+          "label": "PR"
+        }
+      ],
+      "definitions": [
+        {
+          "definition": "knife; a blade used for cutting",
+          "connotation": "literal / kitchen",
+          "images": [
+            "words/20261009/1/kitchen.png",
+            "words/20261009/1/knife.png"
+          ],
+          "examples": [
+            {
+              "es": "Pásame el cuchillo pa' cortar el pollo.",
+              "en": "Pass me the knife to cut the chicken.",
+              "source": "example-cooking.txt"
+            },
+            {
+              "es": "No salgas sin tu cuchillo, mijo.",
+              "en": "Don't go out without your knife, kid.",
+              "source": "example-street.txt"
+            }
+          ]
+        },
+        {
+          "definition": "scar; a lasting mark left by a wound or by life",
+          "connotation": "trauma",
+          "images": [
+            "words/20261009/2/scar.png"
+          ],
+          "examples": [
+            {
+              "es": "Tiene un cuchillo en la ceja desde aquella pelea.",
+              "en": "He's got a scar on his eyebrow from that fight.",
+              "source": "example-body.txt"
+            },
+            {
+              "es": "Ese barrio me dejó un cuchillo que no se me quita.",
+              "en": "That neighborhood left me a scar that won't go away.",
+              "source": "example-memory.txt"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
