@@ -101,6 +101,110 @@ a {
   letter-spacing: 0.02em;
 }
 
+.search {
+  position: relative;
+  width: min(100%, 28rem);
+  margin: 0 auto 1.35rem;
+  animation: rise 0.75s ease-out 0.05s both;
+  z-index: 5;
+}
+
+.search__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.search__input {
+  width: 100%;
+  appearance: none;
+  border: 2px solid rgba(247, 244, 239, 0.35);
+  background: rgba(12, 18, 32, 0.45);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.search__input::placeholder {
+  color: rgba(247, 244, 239, 0.55);
+}
+
+.search__input:focus {
+  border-color: var(--gold);
+  background: rgba(12, 18, 32, 0.65);
+}
+
+.search__results {
+  list-style: none;
+  margin: 0.35rem 0 0;
+  padding: 0.35rem 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-height: min(22rem, 55vh);
+  overflow: auto;
+}
+
+.search__results[hidden] {
+  display: none;
+}
+
+.search__option {
+  width: 100%;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  padding: 0.7rem 0.95rem;
+  cursor: pointer;
+  color: var(--ink);
+  display: grid;
+  gap: 0.15rem;
+}
+
+.search__option:hover,
+.search__option.is-active {
+  background: rgba(0, 45, 98, 0.08);
+}
+
+.search__option-word {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--red-flag);
+}
+
+.search__option-meta {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.search__option-snippet {
+  font-size: 0.88rem;
+  color: var(--blue-pr);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search__empty {
+  padding: 0.85rem 0.95rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
 .panel {
   background: var(--surface);
   border-radius: var(--radius);

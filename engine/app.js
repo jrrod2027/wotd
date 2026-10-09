@@ -3,6 +3,8 @@
  * Reads data/manifest.json (built from words/). Do not put day content here.
  */
 
+import { searchEntries } from "./search.js";
+
 const MANIFEST_URL = "data/manifest.json";
 
 const state = {
@@ -12,6 +14,9 @@ const state = {
   /** index into visibleDates */
   index: -1,
   currentAudio: null,
+  /** @type {{ dateId: string, entry: object }[]} */
+  searchDocs: [],
+  searchActive: -1,
 };
 
 const els = {
@@ -25,6 +30,9 @@ const els = {
   phonetic: document.getElementById("phonetic"),
   audioRow: document.getElementById("audio-row"),
   defs: document.getElementById("defs"),
+  searchInput: document.getElementById("search-input"),
+  searchResults: document.getElementById("search-results"),
+  searchRoot: document.getElementById("search"),
 };
 
 function todayId(date = new Date()) {
@@ -45,6 +53,17 @@ function formatDisplayDate(dateId) {
     month: "long",
     day: "numeric",
   }).format(dt);
+}
+
+function formatShortDate(dateId) {
+  const y = Number(dateId.slice(0, 4));
+  const m = Number(dateId.slice(4, 6)) - 1;
+  const d = Number(dateId.slice(6, 8));
+  return new Intl.DateTimeFormat(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  }).format(new Date(y, m, d));
 }
 
 function escapeHtml(str) {
@@ -207,6 +226,16 @@ function go(delta) {
   renderEntry(state.visibleDates[state.index]);
 }
 
+function jumpToDate(dateId) {
+  const idx = state.visibleDates.indexOf(dateId);
+  if (idx < 0) return;
+  state.index = idx;
+  renderEntry(dateId);
+  closeSearchResults();
+  els.searchInput.blur();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
 function pickInitialDate(requested) {
   const today = todayId();
   const visible = state.visibleDates;
@@ -215,16 +244,112 @@ function pickInitialDate(requested) {
     return requested;
   }
 
-  // Most recent available date on or before today
   for (let i = visible.length - 1; i >= 0; i -= 1) {
     if (visible[i] <= today) return visible[i];
   }
   return null;
 }
 
+function closeSearchResults() {
+  els.searchResults.hidden = true;
+  els.searchResults.replaceChildren();
+  state.searchActive = -1;
+  els.searchInput.removeAttribute("aria-activedescendant");
+}
+
+function renderSearchResults(results, query) {
+  els.searchResults.replaceChildren();
+  state.searchActive = -1;
+
+  if (!query.trim()) {
+    closeSearchResults();
+    return;
+  }
+
+  els.searchResults.hidden = false;
+
+  if (!results.length) {
+    const li = document.createElement("li");
+    li.className = "search__empty";
+    li.textContent = "No matches";
+    els.searchResults.appendChild(li);
+    return;
+  }
+
+  results.forEach((hit, i) => {
+    const li = document.createElement("li");
+    li.setAttribute("role", "option");
+    li.id = `search-opt-${i}`;
+
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "search__option";
+    btn.dataset.dateId = hit.dateId;
+    const pct = Math.round(hit.score * 100);
+    btn.innerHTML = `
+      <span class="search__option-word">${escapeHtml(hit.word)}</span>
+      <span class="search__option-meta">${escapeHtml(formatShortDate(hit.dateId))} · ${escapeHtml(hit.matchType)} · ${pct}%</span>
+      <span class="search__option-snippet">${escapeHtml(hit.snippet)}</span>
+    `;
+    btn.addEventListener("click", () => jumpToDate(hit.dateId));
+    li.appendChild(btn);
+    els.searchResults.appendChild(li);
+  });
+}
+
+function setActiveOption(nextIndex) {
+  const options = [...els.searchResults.querySelectorAll(".search__option")];
+  if (!options.length) return;
+
+  state.searchActive = (nextIndex + options.length) % options.length;
+  options.forEach((opt, i) => {
+    opt.classList.toggle("is-active", i === state.searchActive);
+  });
+  const active = options[state.searchActive];
+  els.searchInput.setAttribute("aria-activedescendant", active.parentElement.id);
+  active.scrollIntoView({ block: "nearest" });
+}
+
+function onSearchInput() {
+  const query = els.searchInput.value;
+  const results = searchEntries(query, state.searchDocs, 10);
+  renderSearchResults(results, query);
+}
+
+function bindSearch() {
+  els.searchInput.addEventListener("input", onSearchInput);
+  els.searchInput.addEventListener("keydown", (event) => {
+    const options = [...els.searchResults.querySelectorAll(".search__option")];
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      if (els.searchResults.hidden) onSearchInput();
+      setActiveOption(state.searchActive + 1);
+    } else if (event.key === "ArrowUp") {
+      event.preventDefault();
+      setActiveOption(state.searchActive - 1);
+    } else if (event.key === "Enter") {
+      if (state.searchActive >= 0 && options[state.searchActive]) {
+        event.preventDefault();
+        jumpToDate(options[state.searchActive].dataset.dateId);
+      } else if (options[0]) {
+        event.preventDefault();
+        jumpToDate(options[0].dataset.dateId);
+      }
+    } else if (event.key === "Escape") {
+      closeSearchResults();
+      els.searchInput.blur();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!els.searchRoot.contains(event.target)) closeSearchResults();
+  });
+}
+
 async function init() {
   els.prevBtn.addEventListener("click", () => go(-1));
   els.nextBtn.addEventListener("click", () => go(1));
+  bindSearch();
 
   try {
     const res = await fetch(MANIFEST_URL, { cache: "no-cache" });
@@ -242,9 +367,14 @@ async function init() {
   state.visibleDates = (state.manifest.availableDates || []).filter((d) => d <= today);
 
   if (!state.visibleDates.length) {
-    showEmpty("No words yet for today or earlier. Add a folder under words/YYYYMMDD/ and rebuild.");
+    showEmpty("No words yet for today or earlier. Add a folder under words/YYYYMMDD/ and push.");
     return;
   }
+
+  state.searchDocs = state.visibleDates.map((dateId) => ({
+    dateId,
+    entry: state.manifest.entries[dateId],
+  }));
 
   const params = new URLSearchParams(window.location.search);
   const initial = pickInitialDate(params.get("d"));
