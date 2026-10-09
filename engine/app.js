@@ -233,7 +233,7 @@ async function init() {
   } catch (err) {
     console.error(err);
     showEmpty(
-      "Could not load word data. If you just added days under words/, run: node scripts/build.mjs"
+      "Could not load word data. If you just pushed a new day, wait a moment for GitHub to rebuild the site."
     );
     return;
   }
