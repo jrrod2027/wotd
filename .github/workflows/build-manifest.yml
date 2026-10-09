@@ -2,6 +2,7 @@ name: Build word manifest
 
 on:
   push:
+    branches: [main]
     paths:
       - "words/**"
       - "scripts/build.mjs"
@@ -11,16 +12,26 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: build-manifest
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Re-checkout in case another push landed while queued
+          fetch-depth: 0
+
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
+
       - name: Build manifest
         run: node scripts/build.mjs
+
       - name: Commit manifest if changed
         run: |
           git config user.name "github-actions[bot]"
@@ -28,7 +39,12 @@ jobs:
           git add data/manifest.json
           if git diff --staged --quiet; then
             echo "No manifest changes"
-          else
-            git commit -m "chore: rebuild words manifest"
-            git push
+            exit 0
           fi
+          git commit -m "chore: rebuild words manifest"
+          # Retry push in case Pages/other jobs raced
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep $((i * 2))
+          done
+          exit 1
