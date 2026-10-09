@@ -101,12 +101,229 @@ a {
   letter-spacing: 0.02em;
 }
 
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem 1.25rem;
+  flex-wrap: wrap;
+  margin: 0 0 1.35rem;
+  animation: rise 0.75s ease-out 0.05s both;
+}
+
+.tabs__btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: rgba(247, 244, 239, 0.62);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.98rem;
+  letter-spacing: 0.02em;
+  padding: 0.35rem 0.15rem 0.5rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.tabs__btn:hover {
+  color: rgba(247, 244, 239, 0.92);
+}
+
+.tabs__btn.is-active {
+  color: var(--white);
+  border-bottom-color: var(--gold);
+}
+
 .panel {
   background: var(--surface);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: clamp(1.25rem, 3vw, 2rem);
   animation: rise 0.8s ease-out 0.08s both;
+}
+
+.tab-panel[hidden] {
+  display: none;
+}
+
+.search {
+  width: 100%;
+}
+
+.search__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.search__input {
+  width: 100%;
+  appearance: none;
+  border: 2px solid rgba(0, 45, 98, 0.2);
+  background: rgba(255, 255, 255, 0.65);
+  color: var(--ink);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.search__input::placeholder {
+  color: var(--muted);
+}
+
+.search__input:focus {
+  border-color: var(--blue-pr);
+}
+
+.search__results {
+  list-style: none;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.search__option {
+  width: 100%;
+  appearance: none;
+  border: 0;
+  background: rgba(0, 45, 98, 0.05);
+  text-align: left;
+  padding: 0.75rem 0.95rem;
+  cursor: pointer;
+  color: var(--ink);
+  display: grid;
+  gap: 0.15rem;
+  border-left: 3px solid transparent;
+}
+
+.search__option:hover,
+.search__option.is-active {
+  background: rgba(0, 45, 98, 0.1);
+  border-left-color: var(--gold);
+}
+
+.search__option-word {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--red-flag);
+}
+
+.search__option-meta {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.search__option-snippet {
+  font-size: 0.88rem;
+  color: var(--blue-pr);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search__empty {
+  padding: 0.85rem 0.15rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.cal__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.cal__title {
+  margin: 0;
+  flex: 1;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--blue-pr);
+}
+
+.cal__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.35rem;
+  margin-bottom: 0.35rem;
+  text-align: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.cal__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.35rem;
+}
+
+.cal__cell {
+  aspect-ratio: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.cal__cell--empty {
+  visibility: hidden;
+}
+
+.cal__cell--mute,
+.cal__cell--future {
+  color: rgba(61, 74, 92, 0.35);
+  font-weight: 500;
+}
+
+button.cal__cell--word {
+  background: rgba(0, 45, 98, 0.08);
+  color: var(--blue-pr);
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+button.cal__cell--word:hover {
+  background: rgba(0, 45, 98, 0.16);
+  transform: translateY(-1px);
+}
+
+.cal__cell--today {
+  box-shadow: inset 0 0 0 2px var(--gold);
+}
+
+button.cal__cell--selected {
+  background: var(--red-flag);
+  color: var(--white);
+}
+
+button.cal__cell--selected:hover {
+  background: var(--red-hot);
+}
+
+.cal__hint {
+  margin: 1rem 0 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
 }
 
 .nav-day {
