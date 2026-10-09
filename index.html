@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vocabulario del Barrio</title>
+    <meta
+      name="description"
+      content="Word of the day — Caribbean Spanish from the barrio. Puerto Rican and Dominican flavors."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="engine/styles.css" />
+  </head>
+  <body>
+    <!-- Decorative flags (PR left, DR right) -->
+    <svg class="site-flags site-flags--pr" viewBox="0 0 90 60" aria-hidden="true" role="img">
+      <title>Puerto Rico</title>
+      <rect width="90" height="60" fill="#fff" />
+      <rect y="0" width="90" height="12" fill="#CE1126" />
+      <rect y="24" width="90" height="12" fill="#CE1126" />
+      <rect y="48" width="90" height="12" fill="#CE1126" />
+      <polygon points="0,0 52,30 0,60" fill="#002D62" />
+      <polygon
+        points="18,30 14.1,41.8 24.5,34.2 11.5,34.2 21.9,41.8"
+        fill="#fff"
+      />
+    </svg>
+
+    <svg class="site-flags site-flags--dr" viewBox="0 0 90 60" aria-hidden="true" role="img">
+      <title>Dominican Republic</title>
+      <rect width="45" height="30" fill="#002D62" />
+      <rect x="45" width="45" height="30" fill="#CE1126" />
+      <rect y="30" width="45" height="30" fill="#CE1126" />
+      <rect x="45" y="30" width="45" height="30" fill="#002D62" />
+      <rect x="37" width="16" height="60" fill="#fff" />
+      <rect y="22" width="90" height="16" fill="#fff" />
+      <circle cx="45" cy="30" r="7" fill="#fff" stroke="#002D62" stroke-width="1" />
+      <text
+        x="45"
+        y="33.5"
+        text-anchor="middle"
+        font-size="8"
+        font-family="serif"
+        fill="#CE1126"
+      >
+        ★
+      </text>
+    </svg>
+
+    <main class="shell">
+      <header class="brand">
+        <h1 class="brand__name">Vocabulario del Barrio</h1>
+        <p class="brand__tag">Una palabra al día — sabor del Caribe</p>
+      </header>
+
+      <p id="status" class="status" role="status">Loading today’s word…</p>
+
+      <section id="panel" class="panel" hidden>
+        <nav class="nav-day" aria-label="Day navigation">
+          <button
+            type="button"
+            id="prev-day"
+            class="nav-btn"
+            aria-label="Previous word day"
+            title="Earlier word"
+          >
+            ←
+          </button>
+          <div class="nav-day__date">
+            <span id="date-label" class="nav-day__label">Word of the day</span>
+            <span id="date-value" class="nav-day__value"></span>
+          </div>
+          <button
+            type="button"
+            id="next-day"
+            class="nav-btn"
+            aria-label="Next word day"
+            title="Later word"
+            disabled
+          >
+            →
+          </button>
+        </nav>
+
+        <div class="word-block">
+          <h2 id="word" class="word-block__term"></h2>
+          <p id="phonetic" class="word-block__phonetic" hidden></p>
+          <div id="audio-row" class="audio-row" aria-label="Pronunciations"></div>
+        </div>
+
+        <div id="defs" class="defs"></div>
+      </section>
+
+      <p class="footer-note">
+        Past days only — never ahead of today. Add content under
+        <code>words/YYYYMMDD/</code>, then run
+        <code>node scripts/build.mjs</code>.
+      </p>
+    </main>
+
+    <script type="module" src="engine/app.js"></script>
+  </body>
+</html>
