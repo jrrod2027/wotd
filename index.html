@@ -35,29 +35,54 @@
         <p class="brand__tag">Una Palabra al Día</p>
       </header>
 
-      <div class="search" id="search">
-        <label class="search__label" for="search-input">Search</label>
-        <input
-          id="search-input"
-          class="search__input"
-          type="search"
-          autocomplete="off"
-          spellcheck="false"
-          placeholder="Search words, meanings, examples…"
-          aria-controls="search-results"
-          aria-autocomplete="list"
-        />
-        <ul
-          id="search-results"
-          class="search__results"
-          role="listbox"
-          hidden
-        ></ul>
-      </div>
+      <nav class="tabs" role="tablist" aria-label="Site sections">
+        <button
+          type="button"
+          class="tabs__btn is-active"
+          role="tab"
+          id="tab-word"
+          aria-controls="panel-word"
+          aria-selected="true"
+          data-tab="word"
+        >
+          Word of the Day
+        </button>
+        <button
+          type="button"
+          class="tabs__btn"
+          role="tab"
+          id="tab-search"
+          aria-controls="panel-search"
+          aria-selected="false"
+          data-tab="search"
+          tabindex="-1"
+        >
+          Search
+        </button>
+        <button
+          type="button"
+          class="tabs__btn"
+          role="tab"
+          id="tab-calendar"
+          aria-controls="panel-calendar"
+          aria-selected="false"
+          data-tab="calendar"
+          tabindex="-1"
+        >
+          Calendar
+        </button>
+      </nav>
 
       <p id="status" class="status" role="status">Loading today’s word…</p>
 
-      <section id="panel" class="panel" hidden>
+      <section
+        id="panel-word"
+        class="panel tab-panel"
+        role="tabpanel"
+        aria-labelledby="tab-word"
+        data-tab-panel="word"
+        hidden
+      >
         <nav class="nav-day" aria-label="Day navigation">
           <button
             type="button"
@@ -91,6 +116,57 @@
         </div>
 
         <div id="defs" class="defs"></div>
+      </section>
+
+      <section
+        id="panel-search"
+        class="panel tab-panel"
+        role="tabpanel"
+        aria-labelledby="tab-search"
+        data-tab-panel="search"
+        hidden
+      >
+        <div class="search" id="search">
+          <label class="search__label" for="search-input">Search</label>
+          <input
+            id="search-input"
+            class="search__input"
+            type="search"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="Search words, meanings, examples…"
+            aria-controls="search-results"
+            aria-autocomplete="list"
+          />
+          <ul id="search-results" class="search__results" role="listbox"></ul>
+        </div>
+      </section>
+
+      <section
+        id="panel-calendar"
+        class="panel tab-panel"
+        role="tabpanel"
+        aria-labelledby="tab-calendar"
+        data-tab-panel="calendar"
+        hidden
+      >
+        <div class="cal" id="calendar">
+          <div class="cal__nav">
+            <button type="button" id="cal-prev" class="nav-btn" aria-label="Previous month">
+              ←
+            </button>
+            <h2 id="cal-title" class="cal__title"></h2>
+            <button type="button" id="cal-next" class="nav-btn" aria-label="Next month">
+              →
+            </button>
+          </div>
+          <div class="cal__weekdays" aria-hidden="true">
+            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span>
+            <span>Thu</span><span>Fri</span><span>Sat</span>
+          </div>
+          <div id="cal-grid" class="cal__grid" role="grid" aria-labelledby="cal-title"></div>
+          <p class="cal__hint">Only days with a published word (today or earlier) are selectable.</p>
+        </div>
       </section>
     </main>
 

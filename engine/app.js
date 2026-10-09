@@ -4,8 +4,17 @@
  */
 
 import { searchEntries } from "./search.js";
+import {
+  buildMonthCells,
+  monthLabel,
+  initialMonth,
+  canGoPrev,
+  canGoNext,
+  parseDateId,
+} from "./calendar.js";
 
 const MANIFEST_URL = "data/manifest.json";
+const TABS = ["word", "search", "calendar"];
 
 const state = {
   manifest: null,
@@ -17,11 +26,16 @@ const state = {
   /** @type {{ dateId: string, entry: object }[]} */
   searchDocs: [],
   searchActive: -1,
+  tab: "word",
+  calYear: 0,
+  calMonth: 0,
 };
 
 const els = {
   status: document.getElementById("status"),
-  panel: document.getElementById("panel"),
+  panelWord: document.getElementById("panel-word"),
+  panelSearch: document.getElementById("panel-search"),
+  panelCalendar: document.getElementById("panel-calendar"),
   dateLabel: document.getElementById("date-label"),
   dateValue: document.getElementById("date-value"),
   prevBtn: document.getElementById("prev-day"),
@@ -33,6 +47,11 @@ const els = {
   searchInput: document.getElementById("search-input"),
   searchResults: document.getElementById("search-results"),
   searchRoot: document.getElementById("search"),
+  tabButtons: [...document.querySelectorAll(".tabs__btn")],
+  calTitle: document.getElementById("cal-title"),
+  calGrid: document.getElementById("cal-grid"),
+  calPrev: document.getElementById("cal-prev"),
+  calNext: document.getElementById("cal-next"),
 };
 
 function todayId(date = new Date()) {
@@ -43,22 +62,17 @@ function todayId(date = new Date()) {
 }
 
 function formatDisplayDate(dateId) {
-  const y = Number(dateId.slice(0, 4));
-  const m = Number(dateId.slice(4, 6)) - 1;
-  const d = Number(dateId.slice(6, 8));
-  const dt = new Date(y, m, d);
+  const { y, m, d } = parseDateId(dateId);
   return new Intl.DateTimeFormat(undefined, {
     weekday: "long",
     year: "numeric",
     month: "long",
     day: "numeric",
-  }).format(dt);
+  }).format(new Date(y, m, d));
 }
 
 function formatShortDate(dateId) {
-  const y = Number(dateId.slice(0, 4));
-  const m = Number(dateId.slice(4, 6)) - 1;
-  const d = Number(dateId.slice(6, 8));
+  const { y, m, d } = parseDateId(dateId);
   return new Intl.DateTimeFormat(undefined, {
     year: "numeric",
     month: "short",
@@ -189,6 +203,18 @@ function renderDefinitions(definitions) {
   });
 }
 
+function syncUrl() {
+  const url = new URL(window.location.href);
+  const dateId = state.visibleDates[state.index];
+  if (dateId) url.searchParams.set("d", dateId);
+  else url.searchParams.delete("d");
+
+  if (state.tab === "word") url.searchParams.delete("tab");
+  else url.searchParams.set("tab", state.tab);
+
+  history.replaceState({ dateId, tab: state.tab }, "", url);
+}
+
 function renderEntry(dateId) {
   const entry = state.manifest.entries[dateId];
   if (!entry) return;
@@ -208,15 +234,16 @@ function renderEntry(dateId) {
   els.prevBtn.disabled = state.index <= 0;
   els.nextBtn.disabled = state.index >= state.visibleDates.length - 1;
 
-  const url = new URL(window.location.href);
-  url.searchParams.set("d", dateId);
-  history.replaceState({ dateId }, "", url);
+  syncUrl();
+  if (state.tab === "calendar") renderCalendar();
 }
 
 function showEmpty(message) {
   els.status.hidden = false;
   els.status.textContent = message;
-  els.panel.hidden = true;
+  for (const panel of [els.panelWord, els.panelSearch, els.panelCalendar]) {
+    panel.hidden = true;
+  }
 }
 
 function go(delta) {
@@ -226,13 +253,12 @@ function go(delta) {
   renderEntry(state.visibleDates[state.index]);
 }
 
-function jumpToDate(dateId) {
+function jumpToDate(dateId, { switchTab = true } = {}) {
   const idx = state.visibleDates.indexOf(dateId);
   if (idx < 0) return;
   state.index = idx;
   renderEntry(dateId);
-  closeSearchResults();
-  els.searchInput.blur();
+  if (switchTab) setTab("word");
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -250,11 +276,47 @@ function pickInitialDate(requested) {
   return null;
 }
 
-function closeSearchResults() {
-  els.searchResults.hidden = true;
-  els.searchResults.replaceChildren();
-  state.searchActive = -1;
-  els.searchInput.removeAttribute("aria-activedescendant");
+function setTab(tab) {
+  if (!TABS.includes(tab)) tab = "word";
+  state.tab = tab;
+
+  for (const btn of els.tabButtons) {
+    const active = btn.dataset.tab === tab;
+    btn.classList.toggle("is-active", active);
+    btn.setAttribute("aria-selected", active ? "true" : "false");
+    btn.tabIndex = active ? 0 : -1;
+  }
+
+  els.panelWord.hidden = tab !== "word";
+  els.panelSearch.hidden = tab !== "search";
+  els.panelCalendar.hidden = tab !== "calendar";
+
+  if (tab === "calendar") renderCalendar();
+  if (tab === "search") {
+    queueMicrotask(() => els.searchInput.focus());
+  }
+
+  syncUrl();
+}
+
+function bindTabs() {
+  for (const btn of els.tabButtons) {
+    btn.addEventListener("click", () => setTab(btn.dataset.tab));
+  }
+
+  document.querySelector(".tabs")?.addEventListener("keydown", (event) => {
+    const order = els.tabButtons;
+    const current = order.findIndex((b) => b.dataset.tab === state.tab);
+    let next = current;
+    if (event.key === "ArrowRight") next = (current + 1) % order.length;
+    else if (event.key === "ArrowLeft") next = (current - 1 + order.length) % order.length;
+    else if (event.key === "Home") next = 0;
+    else if (event.key === "End") next = order.length - 1;
+    else return;
+    event.preventDefault();
+    setTab(order[next].dataset.tab);
+    order[next].focus();
+  });
 }
 
 function renderSearchResults(results, query) {
@@ -262,11 +324,12 @@ function renderSearchResults(results, query) {
   state.searchActive = -1;
 
   if (!query.trim()) {
-    closeSearchResults();
+    const li = document.createElement("li");
+    li.className = "search__empty";
+    li.textContent = "Type to search all published words.";
+    els.searchResults.appendChild(li);
     return;
   }
-
-  els.searchResults.hidden = false;
 
   if (!results.length) {
     const li = document.createElement("li");
@@ -322,7 +385,6 @@ function bindSearch() {
     const options = [...els.searchResults.querySelectorAll(".search__option")];
     if (event.key === "ArrowDown") {
       event.preventDefault();
-      if (els.searchResults.hidden) onSearchInput();
       setActiveOption(state.searchActive + 1);
     } else if (event.key === "ArrowUp") {
       event.preventDefault();
@@ -336,20 +398,94 @@ function bindSearch() {
         jumpToDate(options[0].dataset.dateId);
       }
     } else if (event.key === "Escape") {
-      closeSearchResults();
-      els.searchInput.blur();
+      els.searchInput.value = "";
+      onSearchInput();
     }
   });
+  onSearchInput();
+}
 
-  document.addEventListener("click", (event) => {
-    if (!els.searchRoot.contains(event.target)) closeSearchResults();
+function publishedSet() {
+  return new Set(state.visibleDates);
+}
+
+function renderCalendar() {
+  const today = todayId();
+  const selectedId = state.visibleDates[state.index] || "";
+  const publishedIds = publishedSet();
+
+  els.calTitle.textContent = monthLabel(state.calYear, state.calMonth);
+  els.calPrev.disabled = !canGoPrev(state.calYear, state.calMonth, publishedIds);
+  els.calNext.disabled = !canGoNext(state.calYear, state.calMonth, today);
+
+  const cells = buildMonthCells({
+    year: state.calYear,
+    month: state.calMonth,
+    publishedIds,
+    todayId: today,
+    selectedId,
+  });
+
+  els.calGrid.replaceChildren();
+  for (const cell of cells) {
+    if (cell.day == null) {
+      const empty = document.createElement("div");
+      empty.className = "cal__cell cal__cell--empty";
+      empty.setAttribute("aria-hidden", "true");
+      els.calGrid.appendChild(empty);
+      continue;
+    }
+
+    const selectable = cell.published && !cell.future;
+    const el = document.createElement(selectable ? "button" : "div");
+    el.className = "cal__cell";
+    if (selectable) el.type = "button";
+    el.textContent = String(cell.day);
+
+    if (cell.future) el.classList.add("cal__cell--future");
+    if (!cell.published) el.classList.add("cal__cell--mute");
+    if (selectable) el.classList.add("cal__cell--word");
+    if (cell.today) el.classList.add("cal__cell--today");
+    if (cell.selected) el.classList.add("cal__cell--selected");
+
+    if (selectable) {
+      const word = state.manifest.entries[cell.dateId]?.word || "";
+      el.title = word ? `${word} — ${formatShortDate(cell.dateId)}` : formatShortDate(cell.dateId);
+      el.setAttribute("aria-label", word ? `${cell.day}, ${word}` : `Day ${cell.day}`);
+      el.addEventListener("click", () => jumpToDate(cell.dateId));
+    } else {
+      el.setAttribute("aria-hidden", "true");
+    }
+
+    els.calGrid.appendChild(el);
+  }
+}
+
+function bindCalendar() {
+  els.calPrev.addEventListener("click", () => {
+    state.calMonth -= 1;
+    if (state.calMonth < 0) {
+      state.calMonth = 11;
+      state.calYear -= 1;
+    }
+    renderCalendar();
+  });
+  els.calNext.addEventListener("click", () => {
+    state.calMonth += 1;
+    if (state.calMonth > 11) {
+      state.calMonth = 0;
+      state.calYear += 1;
+    }
+    renderCalendar();
   });
 }
 
 async function init() {
   els.prevBtn.addEventListener("click", () => go(-1));
   els.nextBtn.addEventListener("click", () => go(1));
+  bindTabs();
   bindSearch();
+  bindCalendar();
 
   try {
     const res = await fetch(MANIFEST_URL, { cache: "no-cache" });
@@ -376,13 +512,19 @@ async function init() {
     entry: state.manifest.entries[dateId],
   }));
 
+  const start = initialMonth(publishedSet(), today);
+  state.calYear = start.year;
+  state.calMonth = start.month;
+
   const params = new URLSearchParams(window.location.search);
   const initial = pickInitialDate(params.get("d"));
   state.index = state.visibleDates.indexOf(initial);
 
   els.status.hidden = true;
-  els.panel.hidden = false;
   renderEntry(initial);
+
+  const tabParam = params.get("tab");
+  setTab(TABS.includes(tabParam) ? tabParam : "word");
 }
 
 init();
