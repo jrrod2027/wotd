@@ -307,14 +307,6 @@ a {
   color: var(--muted);
 }
 
-.footer-note {
-  margin: 1.5rem auto 0;
-  text-align: center;
-  color: rgba(247, 244, 239, 0.55);
-  font-size: 0.85rem;
-  max-width: 36rem;
-}
-
 @keyframes rise {
   from {
     opacity: 0;
