@@ -2,13 +2,14 @@
  * Fuzzy search over word-of-the-day text. Returns top matches by score.
  */
 
+// Higher = stronger rank. Accents are folded in `fold()` so users need not type them.
 const FIELD_WEIGHT = {
   word: 1.0,
-  phonetic: 0.75,
-  definition: 0.85,
-  connotation: 0.7,
-  example: 0.65,
-  date: 0.4,
+  definition: 1.0, // equal to the word of the day itself
+  phonetic: 0.8,
+  connotation: 0.4, // mood / theme — helpful, but weaker
+  example: 0.22, // sentence hits matter least
+  date: 0.3,
 };
 
 export function fold(str) {
