@@ -13,9 +13,10 @@ const FIELD_WEIGHT = {
 };
 
 export function fold(str) {
+  // Strip combining marks without Unicode property escapes (wider Safari support)
   return String(str || "")
     .normalize("NFD")
-    .replace(/\p{M}/gu, "")
+    .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .trim();
 }

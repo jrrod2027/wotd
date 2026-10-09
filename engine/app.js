@@ -32,6 +32,7 @@ const state = {
 };
 
 const els = {
+  folder: document.getElementById("folder"),
   status: document.getElementById("status"),
   panelWord: document.getElementById("panel-word"),
   panelSearch: document.getElementById("panel-search"),
@@ -47,7 +48,7 @@ const els = {
   searchInput: document.getElementById("search-input"),
   searchResults: document.getElementById("search-results"),
   searchRoot: document.getElementById("search"),
-  tabButtons: [...document.querySelectorAll(".tabs__btn")],
+  tabButtons: [...document.querySelectorAll(".folder__tab")],
   calTitle: document.getElementById("cal-title"),
   calGrid: document.getElementById("cal-grid"),
   calPrev: document.getElementById("cal-prev"),
@@ -241,9 +242,12 @@ function renderEntry(dateId) {
 function showEmpty(message) {
   els.status.hidden = false;
   els.status.textContent = message;
-  for (const panel of [els.panelWord, els.panelSearch, els.panelCalendar]) {
-    panel.hidden = true;
-  }
+  // Keep the word tab shell visible so the folder never looks blank
+  setTab("word");
+  if (els.word) els.word.textContent = "";
+  if (els.defs) els.defs.replaceChildren();
+  if (els.audioRow) els.audioRow.replaceChildren();
+  if (els.dateValue) els.dateValue.textContent = "";
 }
 
 function go(delta) {
@@ -287,12 +291,31 @@ function setTab(tab) {
     btn.tabIndex = active ? 0 : -1;
   }
 
-  els.panelWord.hidden = tab !== "word";
-  els.panelSearch.hidden = tab !== "search";
-  els.panelCalendar.hidden = tab !== "calendar";
+  const panels = [
+    [els.panelWord, "word"],
+    [els.panelSearch, "search"],
+    [els.panelCalendar, "calendar"],
+  ];
+  for (const [panel, name] of panels) {
+    if (!panel) continue;
+    const active = name === tab;
+    panel.hidden = !active;
+    panel.classList.toggle("is-active", active);
+  }
 
-  if (tab === "calendar") renderCalendar();
-  if (tab === "search") {
+  if (els.folder) {
+    els.folder.classList.toggle("folder--tab-search", tab === "search");
+    els.folder.classList.toggle("folder--tab-calendar", tab === "calendar");
+  }
+
+  if (tab === "calendar") {
+    try {
+      renderCalendar();
+    } catch (err) {
+      console.error(err);
+    }
+  }
+  if (tab === "search" && els.searchInput) {
     queueMicrotask(() => els.searchInput.focus());
   }
 
@@ -304,7 +327,7 @@ function bindTabs() {
     btn.addEventListener("click", () => setTab(btn.dataset.tab));
   }
 
-  document.querySelector(".tabs")?.addEventListener("keydown", (event) => {
+  document.querySelector(".folder__tabs")?.addEventListener("keydown", (event) => {
     const order = els.tabButtons;
     const current = order.findIndex((b) => b.dataset.tab === state.tab);
     let next = current;
@@ -380,6 +403,7 @@ function onSearchInput() {
 }
 
 function bindSearch() {
+  if (!els.searchInput || !els.searchResults) return;
   els.searchInput.addEventListener("input", onSearchInput);
   els.searchInput.addEventListener("keydown", (event) => {
     const options = [...els.searchResults.querySelectorAll(".search__option")];
@@ -462,6 +486,7 @@ function renderCalendar() {
 }
 
 function bindCalendar() {
+  if (!els.calPrev || !els.calNext) return;
   els.calPrev.addEventListener("click", () => {
     state.calMonth -= 1;
     if (state.calMonth < 0) {
@@ -481,50 +506,52 @@ function bindCalendar() {
 }
 
 async function init() {
-  els.prevBtn.addEventListener("click", () => go(-1));
-  els.nextBtn.addEventListener("click", () => go(1));
-  bindTabs();
-  bindSearch();
-  bindCalendar();
-
   try {
+    els.prevBtn?.addEventListener("click", () => go(-1));
+    els.nextBtn?.addEventListener("click", () => go(1));
+    bindTabs();
+    bindSearch();
+    bindCalendar();
+
+    // Show the folder immediately on the default tab
+    setTab("word");
+
     const res = await fetch(MANIFEST_URL, { cache: "no-cache" });
     if (!res.ok) throw new Error(`Could not load ${MANIFEST_URL}`);
     state.manifest = await res.json();
+
+    const today = todayId();
+    state.visibleDates = (state.manifest.availableDates || []).filter((d) => d <= today);
+
+    if (!state.visibleDates.length) {
+      showEmpty("No words yet for today or earlier. Add a folder under words/YYYYMMDD/ and push.");
+      return;
+    }
+
+    state.searchDocs = state.visibleDates.map((dateId) => ({
+      dateId,
+      entry: state.manifest.entries[dateId],
+    }));
+
+    const start = initialMonth(publishedSet(), today);
+    state.calYear = start.year;
+    state.calMonth = start.month;
+
+    const params = new URLSearchParams(window.location.search);
+    const initial = pickInitialDate(params.get("d"));
+    state.index = state.visibleDates.indexOf(initial);
+
+    renderEntry(initial);
+    els.status.hidden = true;
+
+    const tabParam = params.get("tab");
+    setTab(TABS.includes(tabParam) ? tabParam : "word");
   } catch (err) {
     console.error(err);
     showEmpty(
       "Could not load word data. If you just pushed a new day, wait a moment for GitHub to rebuild the site."
     );
-    return;
   }
-
-  const today = todayId();
-  state.visibleDates = (state.manifest.availableDates || []).filter((d) => d <= today);
-
-  if (!state.visibleDates.length) {
-    showEmpty("No words yet for today or earlier. Add a folder under words/YYYYMMDD/ and push.");
-    return;
-  }
-
-  state.searchDocs = state.visibleDates.map((dateId) => ({
-    dateId,
-    entry: state.manifest.entries[dateId],
-  }));
-
-  const start = initialMonth(publishedSet(), today);
-  state.calYear = start.year;
-  state.calMonth = start.month;
-
-  const params = new URLSearchParams(window.location.search);
-  const initial = pickInitialDate(params.get("d"));
-  state.index = state.visibleDates.indexOf(initial);
-
-  els.status.hidden = true;
-  renderEntry(initial);
-
-  const tabParam = params.get("tab");
-  setTab(TABS.includes(tabParam) ? tabParam : "word");
 }
 
 init();
