@@ -57,6 +57,8 @@ a {
   z-index: 20;
   width: min(92px, 18vw);
   height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
   pointer-events: none;
 }
@@ -305,14 +307,6 @@ a {
   text-align: center;
   padding: 2rem 1rem;
   color: var(--muted);
-}
-
-.footer-note {
-  margin: 1.5rem auto 0;
-  text-align: center;
-  color: rgba(247, 244, 239, 0.55);
-  font-size: 0.85rem;
-  max-width: 36rem;
 }
 
 @keyframes rise {
