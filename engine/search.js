@@ -7,7 +7,7 @@ const FIELD_WEIGHT = {
   word: 1.0,
   definition: 1.0, // equal to the word of the day itself
   phonetic: 0.8,
-  connotation: 0.4, // mood / theme — helpful, but weaker
+  connotation: 0.4, // mood / theme - helpful, but weaker
   example: 0.22, // sentence hits matter least
   date: 0.3,
 };

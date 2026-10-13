@@ -3,7 +3,7 @@
  * Scans words/ and writes data/manifest.json for the static engine.
  * Run after adding or editing day folders:  node scripts/build.mjs
  *
- * You only edit files under words/ — never hand-edit data/manifest.json.
+ * You only edit files under words/ - never hand-edit data/manifest.json.
  */
 
 import fs from "node:fs";
