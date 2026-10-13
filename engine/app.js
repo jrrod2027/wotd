@@ -1,5 +1,5 @@
 /**
- * Vocabulario del Barrio — static word-of-the-day engine.
+ * Vocabulario del Barrio - static word-of-the-day engine.
  * Reads data/manifest.json (built from words/). Do not put day content here.
  */
 
@@ -161,7 +161,7 @@ function renderDefinitions(definitions) {
 
     const text = document.createElement("p");
     text.className = "def__text";
-    text.textContent = def.definition || "—";
+    text.textContent = def.definition || "-";
     article.appendChild(text);
 
     if (def.connotation) {
@@ -474,7 +474,7 @@ function renderCalendar() {
 
     if (selectable) {
       const word = state.manifest.entries[cell.dateId]?.word || "";
-      el.title = word ? `${word} — ${formatShortDate(cell.dateId)}` : formatShortDate(cell.dateId);
+      el.title = word ? `${word} - ${formatShortDate(cell.dateId)}` : formatShortDate(cell.dateId);
       el.setAttribute("aria-label", word ? `${cell.day}, ${word}` : `Day ${cell.day}`);
       el.addEventListener("click", () => jumpToDate(cell.dateId));
     } else {
