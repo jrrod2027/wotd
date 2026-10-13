@@ -1,24 +1,49 @@
 {
-  "generatedAt": "2026-10-09T16:32:31.007Z",
+  "generatedAt": "2026-10-13T00:30:05.794Z",
   "availableDates": [
+    "20261007",
     "20261008",
-    "20261009"
+    "20261009",
+    "20261010",
+    "20261011",
+    "20261012",
+    "20261013"
   ],
   "entries": {
-    "20261008": {
-      "date": "20261008",
-      "word": "chévere",
-      "phonetic": "CHEH-veh-reh",
+    "20261007": {
+      "date": "20261007",
+      "word": "gasolina",
+      "phonetic": "gah-so-LEE-nah",
       "audio": [],
       "definitions": [
         {
-          "definition": "cool; awesome; alright",
-          "connotation": "slang / positive",
+          "definition": "gasoline; fuel — also the hooky party energy of the reggaetón classic",
+          "connotation": "party / song",
           "images": [],
           "examples": [
             {
-              "es": "¿Todo bien? — Sí, chévere.",
-              "en": "Everything good? — Yeah, cool.",
+              "es": "¿A ti te gusta la gasolina?",
+              "en": "You like gasoline?",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261008": {
+      "date": "20261008",
+      "word": "mongo",
+      "phonetic": "MOHN-go",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "dumb; lame; corny — used for weak jokes or silly behavior",
+          "connotation": "slang / dismissive",
+          "images": [],
+          "examples": [
+            {
+              "es": "Tú me tiras unos chistes demasiado mongos.",
+              "en": "You throw some way-too-lame jokes at me.",
               "source": "example.txt"
             }
           ]
@@ -76,6 +101,103 @@
               "es": "Ese barrio me dejó un cuchillo que no se me quita.",
               "en": "That neighborhood left me a scar that won't go away.",
               "source": "example-memory.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261010": {
+      "date": "20261010",
+      "word": "chévere",
+      "phonetic": "CHEH-veh-reh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "cool; nice; awesome",
+          "connotation": "slang / positive",
+          "images": [],
+          "examples": [
+            {
+              "es": "Le enseñé un jueguito chévere.",
+              "en": "I showed them a cool little game.",
+              "source": "example-game.txt"
+            },
+            {
+              "es": "Ese suéter te quedó muy chévere.",
+              "en": "That sweater looks really good on you.",
+              "source": "example-sweater.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261011": {
+      "date": "20261011",
+      "word": "pichear",
+      "phonetic": "pee-CHEH-ahr",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to pitch (a ball)",
+          "connotation": "sports / literal",
+          "images": [],
+          "examples": [
+            {
+              "es": "Él le picheó la pelota tan rápido que ni la pude ver.",
+              "en": "He pitched the ball so fast I couldn’t even see it.",
+              "source": "example.txt"
+            }
+          ]
+        },
+        {
+          "definition": "to brush off; to dismiss what someone says",
+          "connotation": "slang / attitude",
+          "images": [],
+          "examples": [
+            {
+              "es": "Se molestó tanto con él que ella empezó a pichear todo lo que decía.",
+              "en": "She got so mad at him that she started brushing off everything he said.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261012": {
+      "date": "20261012",
+      "word": "quillarse",
+      "phonetic": "kee-YAHR-seh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to get upset; to get annoyed / in a mood",
+          "connotation": "slang / mood",
+          "images": [],
+          "examples": [
+            {
+              "es": "Cuando le di a mi hija la muñequita, se quilló conmigo porque era del color equivocado.",
+              "en": "When I gave my daughter the little doll, she got mad at me because it was the wrong color.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261013": {
+      "date": "20261013",
+      "word": "vaina",
+      "phonetic": "VAI-nah",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "thing; stuff — a catch-all for an object, situation, or “whatever that was”",
+          "connotation": "slang / everyday",
+          "images": [],
+          "examples": [
+            {
+              "es": "¿Qué era la vaina que tú llevaste a la fiesta el otro día?",
+              "en": "What was that thing you brought to the party the other day?",
+              "source": "example.txt"
             }
           ]
         }
