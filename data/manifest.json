@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T00:30:05.794Z",
+  "generatedAt": "2026-10-13T00:33:50.925Z",
   "availableDates": [
     "20261007",
     "20261008",
@@ -54,24 +54,12 @@
       "date": "20261009",
       "word": "cuchillo",
       "phonetic": "koo-CHEE-yo",
-      "audio": [
-        {
-          "src": "words/20261009/DR.wav",
-          "label": "DR"
-        },
-        {
-          "src": "words/20261009/PR.wav",
-          "label": "PR"
-        }
-      ],
+      "audio": [],
       "definitions": [
         {
           "definition": "knife; a blade used for cutting",
           "connotation": "literal / kitchen",
-          "images": [
-            "words/20261009/1/kitchen.png",
-            "words/20261009/1/knife.png"
-          ],
+          "images": [],
           "examples": [
             {
               "es": "Pásame el cuchillo pa' cortar el pollo.",
@@ -82,25 +70,6 @@
               "es": "No salgas sin tu cuchillo, mijo.",
               "en": "Don't go out without your knife, kid.",
               "source": "example-street.txt"
-            }
-          ]
-        },
-        {
-          "definition": "scar; a lasting mark left by a wound or by life",
-          "connotation": "trauma",
-          "images": [
-            "words/20261009/2/scar.png"
-          ],
-          "examples": [
-            {
-              "es": "Tiene un cuchillo en la ceja desde aquella pelea.",
-              "en": "He's got a scar on his eyebrow from that fight.",
-              "source": "example-body.txt"
-            },
-            {
-              "es": "Ese barrio me dejó un cuchillo que no se me quita.",
-              "en": "That neighborhood left me a scar that won't go away.",
-              "source": "example-memory.txt"
             }
           ]
         }
