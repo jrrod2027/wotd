@@ -125,17 +125,28 @@ a {
   color: rgba(247, 244, 239, 0.55);
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(0.68rem, 2.2vw, 0.88rem);
   letter-spacing: 0.01em;
-  padding: 0.5rem 0.65rem 0.55rem;
+  padding: 0.5rem clamp(0.28rem, 1.8vw, 0.65rem) 0.55rem;
   border-radius: 10px 10px 0 0;
   transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
   position: relative;
   top: 2px;
   flex: 1 1 0;
   min-width: 0;
-  white-space: nowrap;
   text-align: center;
+  overflow: hidden;
+  container-type: inline-size;
+  container-name: folder-tab;
+}
+
+.folder__tab-label {
+  display: block;
+  white-space: nowrap;
+  /* Scale label to the tab width so "Word of the Day" never spills */
+  font-size: clamp(0.55rem, 11cqw, 0.88rem);
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: clip;
 }
 
 .folder__tab:hover:not(.is-active) {
