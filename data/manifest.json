@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T11:59:18.681Z",
+  "generatedAt": "2026-10-16T00:26:56.566Z",
   "availableDates": [
     "20261007",
     "20261008",
@@ -9,7 +9,8 @@
     "20261012",
     "20261013",
     "20261014",
-    "20261015"
+    "20261015",
+    "20261016"
   ],
   "entries": {
     "20261007": {
@@ -208,6 +209,50 @@
             {
               "es": "Yo no voy a cambiar de opinión porque fulano piensa diferente.",
               "en": "I'm not gonna change my mind because fulano thinks differently.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261016": {
+      "date": "20261016",
+      "word": "cuarto",
+      "phonetic": "KWAR-toh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "money; cash. Street slang for dough, especially when you're talking about having (or not having) any.",
+          "connotation": "slang / money",
+          "images": [],
+          "examples": [
+            {
+              "es": "No tengo cuarto pa' salir esta noche.",
+              "en": "I don't have money to go out tonight.",
+              "source": "example.txt"
+            }
+          ]
+        },
+        {
+          "definition": "room; bedroom. The space you sleep in or hang out in at home.",
+          "connotation": "literal / home",
+          "images": [],
+          "examples": [
+            {
+              "es": "Entra a mi cuarto, que te quiero mostrar una vaina.",
+              "en": "Come into my room, I want to show you something.",
+              "source": "example.txt"
+            }
+          ]
+        },
+        {
+          "definition": "fourth. The ordinal number after third (el cuarto, la cuarta).",
+          "connotation": "literal / number",
+          "images": [],
+          "examples": [
+            {
+              "es": "Él llegó en el cuarto puesto de la carrera.",
+              "en": "He finished in fourth place in the race.",
               "source": "example.txt"
             }
           ]
