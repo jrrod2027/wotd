@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T00:29:46.295Z",
+  "generatedAt": "2026-10-17T04:20:26.470Z",
   "availableDates": [
     "20261007",
     "20261008",
@@ -10,7 +10,8 @@
     "20261013",
     "20261014",
     "20261015",
-    "20261016"
+    "20261016",
+    "20261017"
   ],
   "entries": {
     "20261007": {
@@ -253,6 +254,26 @@
             {
               "es": "Él llegó en el cuarto puesto de la carrera.",
               "en": "He finished in fourth place in the race.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261017": {
+      "date": "20261017",
+      "word": "fracaso",
+      "phonetic": "frah-KAH-so",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "mistake; failure; flop. When something goes wrong or doesn't work out.",
+          "connotation": "everyday / negative",
+          "images": [],
+          "examples": [
+            {
+              "es": "Eso fue un fracaso total — me equivoqué de camino y llegué tarde.",
+              "en": "That was a total mistake — I took the wrong way and showed up late.",
               "source": "example.txt"
             }
           ]
