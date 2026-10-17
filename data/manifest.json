@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T04:23:23.561Z",
+  "generatedAt": "2026-10-17T17:11:25.238Z",
   "availableDates": [
     "20261007",
     "20261008",
@@ -11,7 +11,8 @@
     "20261014",
     "20261015",
     "20261016",
-    "20261017"
+    "20261017",
+    "20261018"
   ],
   "entries": {
     "20261007": {
@@ -274,6 +275,26 @@
             {
               "es": "Eso fue un fracaso total — me equivoqué de camino y llegué tarde.",
               "en": "That was a total mistake — I took the wrong way and showed up late.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261018": {
+      "date": "20261018",
+      "word": "corre corre",
+      "phonetic": "KOH-reh KOH-reh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "a rush; hurry-scurry; scramble. The chaotic hustle when everyone's running around trying to get something done.",
+          "connotation": "slang / everyday",
+          "images": [],
+          "examples": [
+            {
+              "es": "Había un corre corre en la casa antes de que llegaran los invitados.",
+              "en": "There was a crazy rush around the house before the guests arrived.",
               "source": "example.txt"
             }
           ]
