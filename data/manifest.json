@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T04:23:23.561Z",
+  "generatedAt": "2026-10-17T17:36:33.488Z",
   "availableDates": [
     "20261007",
     "20261008",
@@ -11,7 +11,82 @@
     "20261014",
     "20261015",
     "20261016",
-    "20261017"
+    "20261017",
+    "20261018",
+    "20261019",
+    "20261020",
+    "20261021",
+    "20261022",
+    "20261023",
+    "20261024",
+    "20261025",
+    "20261026",
+    "20261027",
+    "20261028",
+    "20261029",
+    "20261030",
+    "20261031",
+    "20261101",
+    "20261102",
+    "20261103",
+    "20261104",
+    "20261105",
+    "20261106",
+    "20261107",
+    "20261108",
+    "20261109",
+    "20261110",
+    "20261111",
+    "20261112",
+    "20261113",
+    "20261114",
+    "20261115",
+    "20261116",
+    "20261117",
+    "20261118",
+    "20261119",
+    "20261120",
+    "20261121",
+    "20261122",
+    "20261123",
+    "20261124",
+    "20261125",
+    "20261126",
+    "20261127",
+    "20261128",
+    "20261129",
+    "20261130",
+    "20261201",
+    "20261202",
+    "20261203",
+    "20261204",
+    "20261205",
+    "20261206",
+    "20261207",
+    "20261208",
+    "20261209",
+    "20261210",
+    "20261211",
+    "20261212",
+    "20261213",
+    "20261214",
+    "20261215",
+    "20261216",
+    "20261217",
+    "20261218",
+    "20261219",
+    "20261220",
+    "20261221",
+    "20261222",
+    "20261223",
+    "20261224",
+    "20261225",
+    "20261226",
+    "20261227",
+    "20261228",
+    "20261229",
+    "20261230",
+    "20261231"
   ],
   "entries": {
     "20261007": {
@@ -274,6 +349,1506 @@
             {
               "es": "Eso fue un fracaso total — me equivoqué de camino y llegué tarde.",
               "en": "That was a total mistake — I took the wrong way and showed up late.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261018": {
+      "date": "20261018",
+      "word": "corre corre",
+      "phonetic": "KOH-reh KOH-reh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "a rush; hurry-scurry; scramble. The chaotic hustle when everyone's running around trying to get something done.",
+          "connotation": "slang / everyday",
+          "images": [],
+          "examples": [
+            {
+              "es": "Había un corre corre en la casa antes de que llegaran los invitados.",
+              "en": "There was a crazy rush around the house before the guests arrived.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261019": {
+      "date": "20261019",
+      "word": "desvelarse",
+      "phonetic": "des-veh-LAHR-seh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to stay up late; to lose sleep. When you can't (or won't) go to bed.",
+          "connotation": "everyday / tired",
+          "images": [],
+          "examples": [
+            {
+              "es": "Me desvelé viendo una serie y ahora no doy más.",
+              "en": "I stayed up late watching a show and now I'm wiped.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261020": {
+      "date": "20261020",
+      "word": "apapachar",
+      "phonetic": "ah-pah-pah-CHAR",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to cuddle; to hug with care. Soft affection — holding someone like you mean it.",
+          "connotation": "affection / warm",
+          "images": [],
+          "examples": [
+            {
+              "es": "Ven pa'cá que te quiero apapachar un ratico.",
+              "en": "Come here, I want to cuddle you for a bit.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261021": {
+      "date": "20261021",
+      "word": "averiguar",
+      "phonetic": "ah-veh-ree-GWAR",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to find out; to figure out. Digging until you know what's going on.",
+          "connotation": "everyday / curious",
+          "images": [],
+          "examples": [
+            {
+              "es": "Voy a averiguar quién tiró esa vaina.",
+              "en": "I'm going to find out who threw that thing.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261022": {
+      "date": "20261022",
+      "word": "ojalá",
+      "phonetic": "oh-hah-LAH",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "hopefully; I hope so. A wish that something turns out right.",
+          "connotation": "everyday / wishful",
+          "images": [],
+          "examples": [
+            {
+              "es": "Ojalá no llueva el día de la fiesta.",
+              "en": "Hopefully it doesn't rain on the day of the party.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261023": {
+      "date": "20261023",
+      "word": "echar de menos",
+      "phonetic": "eh-CHAR deh MEH-nohs",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to miss (someone/something). That ache when they're not around.",
+          "connotation": "emotional / longing",
+          "images": [],
+          "examples": [
+            {
+              "es": "Te echo de menos desde que te mudaste.",
+              "en": "I've missed you since you moved away.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261024": {
+      "date": "20261024",
+      "word": "aguantar",
+      "phonetic": "ah-gwahn-TAR",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to put up with; to endure. Holding on through something annoying or hard.",
+          "connotation": "everyday / tough",
+          "images": [],
+          "examples": [
+            {
+              "es": "No aguanto más ese ruido de la calle.",
+              "en": "I can't put up with that street noise anymore.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261025": {
+      "date": "20261025",
+      "word": "de repente",
+      "phonetic": "deh reh-PEN-teh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "suddenly; all of a sudden. When something hits out of nowhere.",
+          "connotation": "everyday / abrupt",
+          "images": [],
+          "examples": [
+            {
+              "es": "De repente se apagó la luz en toda la cuadra.",
+              "en": "All of a sudden the lights went out on the whole block.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261026": {
+      "date": "20261026",
+      "word": "apenas",
+      "phonetic": "ah-PEH-nahs",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "barely; hardly; just. Almost not — or only just now.",
+          "connotation": "everyday / degree",
+          "images": [],
+          "examples": [
+            {
+              "es": "Apenas llegué y ya me están pidiendo favores.",
+              "en": "I barely got here and they're already asking me for favors.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261027": {
+      "date": "20261027",
+      "word": "arrepentirse",
+      "phonetic": "ah-reh-pen-TEER-seh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to regret; to feel sorry. Wishing you'd done it differently.",
+          "connotation": "emotional / regret",
+          "images": [],
+          "examples": [
+            {
+              "es": "Me arrepentí de no haber ido a la boda.",
+              "en": "I regretted not going to the wedding.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261028": {
+      "date": "20261028",
+      "word": "atreverse",
+      "phonetic": "ah-treh-VEHR-seh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to dare; to have the guts. Doing the thing even when you're nervous.",
+          "connotation": "everyday / bold",
+          "images": [],
+          "examples": [
+            {
+              "es": "¿Te atreves a probar esa comida tan picante?",
+              "en": "Do you dare try that super spicy food?",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261029": {
+      "date": "20261029",
+      "word": "dar igual",
+      "phonetic": "dahr ee-GWAHL",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to not matter; whatever. When you genuinely don't care either way.",
+          "connotation": "everyday / indifferent",
+          "images": [],
+          "examples": [
+            {
+              "es": "Me da igual si vamos hoy o mañana.",
+              "en": "I don't care if we go today or tomorrow.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261030": {
+      "date": "20261030",
+      "word": "quedarse",
+      "phonetic": "keh-DAHR-seh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to stay; to remain. Hanging back instead of leaving — or ending up a certain way.",
+          "connotation": "everyday / stay",
+          "images": [],
+          "examples": [
+            {
+              "es": "Me quedé en casa porque estaba lloviendo mucho.",
+              "en": "I stayed home because it was raining hard.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261031": {
+      "date": "20261031",
+      "word": "sobremesa",
+      "phonetic": "soh-breh-MEH-sah",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "lingering at the table after a meal. Talking, laughing, not rushing to clear up.",
+          "connotation": "social / cozy",
+          "images": [],
+          "examples": [
+            {
+              "es": "La sobremesa duró más que la cena misma.",
+              "en": "The after-dinner chat lasted longer than dinner itself.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261101": {
+      "date": "20261101",
+      "word": "madrugar",
+      "phonetic": "mah-droo-GAR",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to get up early. Beating the sunrise — on purpose or because life said so.",
+          "connotation": "everyday / early",
+          "images": [],
+          "examples": [
+            {
+              "es": "Tuvi que madrugar pa' coger la guagua a tiempo.",
+              "en": "I had to get up early to catch the bus on time.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261102": {
+      "date": "20261102",
+      "word": "aprovechar",
+      "phonetic": "ah-proh-veh-CHAR",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to make the most of; to take advantage of (an opportunity). Not wasting the moment.",
+          "connotation": "everyday / useful",
+          "images": [],
+          "examples": [
+            {
+              "es": "Aprovecha que está barato y compra dos.",
+              "en": "Take advantage of how cheap it is and buy two.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261103": {
+      "date": "20261103",
+      "word": "merecer",
+      "phonetic": "meh-reh-SEHR",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to deserve; to be worth. Earning something — or being worth the effort.",
+          "connotation": "everyday / judgment",
+          "images": [],
+          "examples": [
+            {
+              "es": "Tú mereces un descanso después de esa semana.",
+              "en": "You deserve a break after that week.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261104": {
+      "date": "20261104",
+      "word": "ajetreo",
+      "phonetic": "ah-heh-TREH-oh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "hustle; busy grind. The nonstop running around of a packed day.",
+          "connotation": "everyday / busy",
+          "images": [],
+          "examples": [
+            {
+              "es": "Con este ajetreo no me queda tiempo ni pa' comer.",
+              "en": "With this hustle I don't even have time to eat.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261105": {
+      "date": "20261105",
+      "word": "despejarse",
+      "phonetic": "des-peh-HAR-seh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to clear your head; to clear up (weather/mind). Getting space so things feel lighter.",
+          "connotation": "everyday / relief",
+          "images": [],
+          "examples": [
+            {
+              "es": "Salí a caminar pa' despejarme un poco.",
+              "en": "I went for a walk to clear my head a bit.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261106": {
+      "date": "20261106",
+      "word": "echar una mano",
+      "phonetic": "eh-CHAR OO-nah MAH-noh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to lend a hand; to help out. Jumping in when someone needs backup.",
+          "connotation": "everyday / helpful",
+          "images": [],
+          "examples": [
+            {
+              "es": "¿Me echas una mano con estas cajas?",
+              "en": "Can you lend me a hand with these boxes?",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261107": {
+      "date": "20261107",
+      "word": "pillar",
+      "phonetic": "pee-YAHR",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to catch; to snag; to get. Grabbing a ride, catching someone, or scoring something.",
+          "connotation": "slang / everyday",
+          "images": [],
+          "examples": [
+            {
+              "es": "Pillé un uber rapidito afuera del colmado.",
+              "en": "I caught a quick Uber outside the corner store.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261108": {
+      "date": "20261108",
+      "word": "guagua",
+      "phonetic": "GWAH-gwah",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "bus. The public ride that gets you across town (Caribbean Spanish).",
+          "connotation": "Caribbean / transport",
+          "images": [],
+          "examples": [
+            {
+              "es": "La guagua se llenó y me tocó ir de pie.",
+              "en": "The bus filled up and I had to go standing.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261109": {
+      "date": "20261109",
+      "word": "jeva",
+      "phonetic": "HEH-vah",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "girl; girlfriend. Street word for a young woman / your girl (Caribbean).",
+          "connotation": "slang / Caribbean",
+          "images": [],
+          "examples": [
+            {
+              "es": "Esa jeva es bien chévere, de verdad.",
+              "en": "That girl is really cool, for real.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261110": {
+      "date": "20261110",
+      "word": "relajo",
+      "phonetic": "reh-LAH-hoh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "messing around; chaos; a joke of a situation. Playful disorder — or when things get out of hand.",
+          "connotation": "slang / Caribbean",
+          "images": [],
+          "examples": [
+            {
+              "es": "Deja el relajo y ponte serio un momento.",
+              "en": "Quit messing around and get serious for a second.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261111": {
+      "date": "20261111",
+      "word": "bregar (con)",
+      "phonetic": "breh-GAR (kohn)",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to deal with; to hustle through. Handling a problem the hard way until it moves.",
+          "connotation": "Caribbean / grind",
+          "images": [],
+          "examples": [
+            {
+              "es": "Tengo que bregar con ese papeleo mañana.",
+              "en": "I have to deal with that paperwork tomorrow.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261112": {
+      "date": "20261112",
+      "word": "zafacón",
+      "phonetic": "sah-fah-KOHN",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "trash can; garbage bin. Where the basura goes (Puerto Rico / Caribbean).",
+          "connotation": "Caribbean / household",
+          "images": [],
+          "examples": [
+            {
+              "es": "Tira eso al zafacón, por favor.",
+              "en": "Throw that in the trash can, please.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261113": {
+      "date": "20261113",
+      "word": "chin",
+      "phonetic": "cheen",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "a little bit; a tiny bit. Dominican for \"un poquito\".",
+          "connotation": "Dominican / everyday",
+          "images": [],
+          "examples": [
+            {
+              "es": "Échame un chin más de café.",
+              "en": "Pour me a little more coffee.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261114": {
+      "date": "20261114",
+      "word": "afuera",
+      "phonetic": "ah-FWEH-rah",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "outside; outdoors. Not in here — out there.",
+          "connotation": "everyday / place",
+          "images": [],
+          "examples": [
+            {
+              "es": "Los muchachos están jugando afuera.",
+              "en": "The kids are playing outside.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261115": {
+      "date": "20261115",
+      "word": "quisqueyano",
+      "phonetic": "kees-keh-YAH-noh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "Dominican. From Quisqueya — a proud name for someone from the DR.",
+          "connotation": "Dominican / identity",
+          "images": [],
+          "examples": [
+            {
+              "es": "Soy quisqueyano y se nota en cómo hablo.",
+              "en": "I'm Dominican and you can tell from how I talk.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261116": {
+      "date": "20261116",
+      "word": "enredado",
+      "phonetic": "en-reh-DAH-doh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "tangled up; complicated; mixed up in something. Messy situation or messy hair.",
+          "connotation": "everyday / messy",
+          "images": [],
+          "examples": [
+            {
+              "es": "Ese problema está bien enredado.",
+              "en": "That problem is really tangled up.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261117": {
+      "date": "20261117",
+      "word": "fajarse",
+      "phonetic": "fah-HAR-seh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to go all in; to grind hard. Putting your whole back into the work (Caribbean).",
+          "connotation": "Caribbean / effort",
+          "images": [],
+          "examples": [
+            {
+              "es": "Hay que fajarse si queremos terminar hoy.",
+              "en": "We've got to go all in if we want to finish today.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261118": {
+      "date": "20261118",
+      "word": "janguear",
+      "phonetic": "hang-geh-AHR",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to hang out. Chill time with friends — no big agenda.",
+          "connotation": "slang / Caribbean",
+          "images": [],
+          "examples": [
+            {
+              "es": "¿Salimos a janguear esta noche o qué?",
+              "en": "Are we going out to hang tonight or what?",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261119": {
+      "date": "20261119",
+      "word": "bochinche",
+      "phonetic": "boh-CHEEN-cheh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "gossip; drama. The juicy (or messy) talk going around the barrio.",
+          "connotation": "Caribbean / gossip",
+          "images": [],
+          "examples": [
+            {
+              "es": "No me metas en ese bochinche, por favor.",
+              "en": "Don't pull me into that gossip, please.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261120": {
+      "date": "20261120",
+      "word": "embuste",
+      "phonetic": "em-BOOS-teh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "a lie; a fib. Something that isn't true — and everybody kind of knows.",
+          "connotation": "everyday / dishonest",
+          "images": [],
+          "examples": [
+            {
+              "es": "Eso que te dijeron es un embuste.",
+              "en": "What they told you is a lie.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261121": {
+      "date": "20261121",
+      "word": "friolento",
+      "phonetic": "free-oh-LEN-toh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "sensitive to cold; always chilly. The person who needs a sweater when it's barely cool.",
+          "connotation": "everyday / personality",
+          "images": [],
+          "examples": [
+            {
+              "es": "Soy bien friolento — tráeme una cobija.",
+              "en": "I get cold really easily — bring me a blanket.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261122": {
+      "date": "20261122",
+      "word": "empalagar",
+      "phonetic": "em-pah-lah-GAR",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to be overly sweet / cloying. Too much sugar — or too much sweetness in attitude.",
+          "connotation": "everyday / sensory",
+          "images": [],
+          "examples": [
+            {
+              "es": "Ese postre empalaga; no puedo comer más.",
+              "en": "That dessert is too sweet; I can't eat any more.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261123": {
+      "date": "20261123",
+      "word": "desabrido",
+      "phonetic": "des-ah-BREE-doh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "bland; tasteless. Food (or a vibe) with no flavor.",
+          "connotation": "everyday / food",
+          "images": [],
+          "examples": [
+            {
+              "es": "La sopa quedó desabrida; le falta sal.",
+              "en": "The soup came out bland; it needs salt.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261124": {
+      "date": "20261124",
+      "word": "escuálido",
+      "phonetic": "es-KWAH-lee-doh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "scrawny; skinny; weak-looking. Thin in a \"you need to eat\" way.",
+          "connotation": "everyday / appearance",
+          "images": [],
+          "examples": [
+            {
+              "es": "Después de estar enfermo se veía escuálido.",
+              "en": "After being sick he looked really scrawny.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261125": {
+      "date": "20261125",
+      "word": "amanecer",
+      "phonetic": "ah-mah-neh-SEHR",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to dawn; daybreak. When the night ends — or you make it through till morning.",
+          "connotation": "everyday / time",
+          "images": [],
+          "examples": [
+            {
+              "es": "Amanecimos hablando en el balcón.",
+              "en": "We talked on the balcony until dawn.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261126": {
+      "date": "20261126",
+      "word": "trasnochar",
+      "phonetic": "trahs-noh-CHAR",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to stay up all night. Skipping sleep on purpose (or by accident).",
+          "connotation": "everyday / night",
+          "images": [],
+          "examples": [
+            {
+              "es": "Trasnochamos estudiando pa' el examen.",
+              "en": "We stayed up all night studying for the exam.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261127": {
+      "date": "20261127",
+      "word": "desparpajo",
+      "phonetic": "des-par-PAH-hoh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "nerve; bold ease; cheek. Talking or acting without shame — confidently loose.",
+          "connotation": "everyday / attitude",
+          "images": [],
+          "examples": [
+            {
+              "es": "Habla con un desparpajo que a mí me da risa.",
+              "en": "She talks with a bold ease that makes me laugh.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261128": {
+      "date": "20261128",
+      "word": "vergüenza ajena",
+      "phonetic": "vehr-GWEHN-sah ah-HEH-nah",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "secondhand embarrassment. Cringing hard for someone else.",
+          "connotation": "emotional / social",
+          "images": [],
+          "examples": [
+            {
+              "es": "Me dio vergüenza ajena con ese discurso.",
+              "en": "I got secondhand embarrassment from that speech.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261129": {
+      "date": "20261129",
+      "word": "chismear",
+      "phonetic": "chees-meh-AHR",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to gossip. Trading stories about who's doing what.",
+          "connotation": "social / gossip",
+          "images": [],
+          "examples": [
+            {
+              "es": "Nos quedamos chismeando hasta tarde.",
+              "en": "We stayed up gossiping until late.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261130": {
+      "date": "20261130",
+      "word": "añejo",
+      "phonetic": "ah-NYEH-hoh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "aged; old-school; vintage. Something that's been around — rum, a habit, a memory.",
+          "connotation": "everyday / aged",
+          "images": [],
+          "examples": [
+            {
+              "es": "Ese ron añejo sabe diferente.",
+              "en": "That aged rum tastes different.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261201": {
+      "date": "20261201",
+      "word": "desenvolverse",
+      "phonetic": "des-em-bol-VEHR-seh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to handle yourself; to get by smoothly. Moving through a situation with skill.",
+          "connotation": "everyday / skill",
+          "images": [],
+          "examples": [
+            {
+              "es": "Ella se desenvuelve bien en cualquier reunión.",
+              "en": "She handles herself well in any meeting.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261202": {
+      "date": "20261202",
+      "word": "tantear",
+      "phonetic": "tahn-teh-AHR",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to feel out; to size up. Testing the waters before you commit.",
+          "connotation": "everyday / cautious",
+          "images": [],
+          "examples": [
+            {
+              "es": "Voy a tantear si le interesa el plan.",
+              "en": "I'm going to feel out whether they're into the plan.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261203": {
+      "date": "20261203",
+      "word": "regañar",
+      "phonetic": "reh-gah-NYAR",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to scold; to tell off. Getting (or giving) a serious talking-to.",
+          "connotation": "everyday / stern",
+          "images": [],
+          "examples": [
+            {
+              "es": "Mami me regañó por llegar tarde otra vez.",
+              "en": "Mom scolded me for showing up late again.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261204": {
+      "date": "20261204",
+      "word": "mimado",
+      "phonetic": "mee-MAH-doh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "spoiled; pampered. Used to getting their way — or being treated soft.",
+          "connotation": "everyday / personality",
+          "images": [],
+          "examples": [
+            {
+              "es": "Ese niño está bien mimado.",
+              "en": "That kid is really spoiled.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261205": {
+      "date": "20261205",
+      "word": "descarado",
+      "phonetic": "des-kah-RAH-doh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "shameless; bold-faced. No shame about what they just did.",
+          "connotation": "everyday / attitude",
+          "images": [],
+          "examples": [
+            {
+              "es": "Qué descarado pedirte plata después de eso.",
+              "en": "How shameless to ask you for money after that.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261206": {
+      "date": "20261206",
+      "word": "entrometido",
+      "phonetic": "en-troh-meh-TEE-doh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "nosy; meddlesome. Always in other people's business.",
+          "connotation": "everyday / nosy",
+          "images": [],
+          "examples": [
+            {
+              "es": "No seas entrometido; eso no te importa.",
+              "en": "Don't be nosy; that's none of your business.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261207": {
+      "date": "20261207",
+      "word": "chapucear",
+      "phonetic": "chah-poo-seh-AHR",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to botch; to do a sloppy job. Rushing something so it comes out half-done.",
+          "connotation": "everyday / careless",
+          "images": [],
+          "examples": [
+            {
+              "es": "No chapucees la pintura; hazlo bien.",
+              "en": "Don't botch the paint job; do it right.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261208": {
+      "date": "20261208",
+      "word": "maña",
+      "phonetic": "MAH-nyah",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "knack; trick; bad habit. A clever workaround — or a stubborn quirk.",
+          "connotation": "everyday / habit",
+          "images": [],
+          "examples": [
+            {
+              "es": "Tiene una maña pa' abrir frascos sin esfuerzo.",
+              "en": "He's got a knack for opening jars with no effort.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261209": {
+      "date": "20261209",
+      "word": "pereza",
+      "phonetic": "peh-REH-sah",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "laziness; not feeling like it. That heavy \"maybe later\" energy.",
+          "connotation": "everyday / mood",
+          "images": [],
+          "examples": [
+            {
+              "es": "Me da pereza salir con este calor.",
+              "en": "I feel too lazy to go out in this heat.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261210": {
+      "date": "20261210",
+      "word": "agobiarse",
+      "phonetic": "ah-goh-BYAHR-seh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to get overwhelmed; to feel smothered. When everything piles up at once.",
+          "connotation": "emotional / stress",
+          "images": [],
+          "examples": [
+            {
+              "es": "No te agobies; lo hacemos paso a paso.",
+              "en": "Don't get overwhelmed; we'll do it step by step.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261211": {
+      "date": "20261211",
+      "word": "despilfarrar",
+      "phonetic": "des-peel-fah-RAHR",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to waste; to squander. Throwing money (or time) around carelessly.",
+          "connotation": "everyday / wasteful",
+          "images": [],
+          "examples": [
+            {
+              "es": "No despilfarres el sueldo en una sola noche.",
+              "en": "Don't blow the paycheck in a single night.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261212": {
+      "date": "20261212",
+      "word": "escatimar",
+      "phonetic": "es-kah-tee-MAR",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to skimp; to hold back. Giving less than you should.",
+          "connotation": "everyday / stingy",
+          "images": [],
+          "examples": [
+            {
+              "es": "No escatimes en la comida si vienen visitas.",
+              "en": "Don't skimp on the food if guests are coming.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261213": {
+      "date": "20261213",
+      "word": "a regañadientes",
+      "phonetic": "ah reh-gah-nyah-DYEN-tes",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "reluctantly; grudgingly. Doing it — but complaining the whole way.",
+          "connotation": "everyday / reluctant",
+          "images": [],
+          "examples": [
+            {
+              "es": "Fui a la reunión a regañadientes.",
+              "en": "I went to the meeting reluctantly.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261214": {
+      "date": "20261214",
+      "word": "sinvergüenza",
+      "phonetic": "seen-vehr-GWEHN-sah",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "shameless person; rascal. No shame — sometimes funny, sometimes not.",
+          "connotation": "everyday / insult-playful",
+          "images": [],
+          "examples": [
+            {
+              "es": "Ese sinvergüenza se comió mi almuerzo.",
+              "en": "That rascal ate my lunch.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261215": {
+      "date": "20261215",
+      "word": "boricua",
+      "phonetic": "boh-REE-kwah",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "Puerto Rican. From Borikén — a proud name for someone from PR.",
+          "connotation": "Puerto Rican / identity",
+          "images": [],
+          "examples": [
+            {
+              "es": "Soy boricua de corazón, aunque viva afuera.",
+              "en": "I'm Puerto Rican at heart, even if I live abroad.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261216": {
+      "date": "20261216",
+      "word": "dar por sentado",
+      "phonetic": "dahr por sen-TAH-doh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to take for granted. Assuming it'll always be there.",
+          "connotation": "everyday / assumption",
+          "images": [],
+          "examples": [
+            {
+              "es": "No des por sentado que siempre voy a estar disponible.",
+              "en": "Don't take for granted that I'll always be free.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261217": {
+      "date": "20261217",
+      "word": "caer en cuenta",
+      "phonetic": "kah-EHR en KWEN-tah",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to realize; to catch on. The moment it finally clicks.",
+          "connotation": "everyday / realization",
+          "images": [],
+          "examples": [
+            {
+              "es": "Caí en cuenta de que había dejado las llaves en casa.",
+              "en": "I realized I'd left the keys at home.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261218": {
+      "date": "20261218",
+      "word": "echar en cara",
+      "phonetic": "eh-CHAR en KAH-rah",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to throw in someone's face. Reminding them of a favor or a mistake.",
+          "connotation": "emotional / conflict",
+          "images": [],
+          "examples": [
+            {
+              "es": "No me eches en cara lo que te presté.",
+              "en": "Don't throw in my face what I lent you.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261219": {
+      "date": "20261219",
+      "word": "hacer falta",
+      "phonetic": "ah-SEHR FAHL-tah",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to be needed; to be missed. When something (or someone) is lacking.",
+          "connotation": "everyday / need",
+          "images": [],
+          "examples": [
+            {
+              "es": "Hace falta más hielo pa' las bebidas.",
+              "en": "We need more ice for the drinks.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261220": {
+      "date": "20261220",
+      "word": "meter la pata",
+      "phonetic": "meh-TEHR lah PAH-tah",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to put your foot in it; to mess up. Saying or doing the wrong thing.",
+          "connotation": "everyday / mistake",
+          "images": [],
+          "examples": [
+            {
+              "es": "Metí la pata cuando hablé sin pensar.",
+              "en": "I put my foot in it when I spoke without thinking.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261221": {
+      "date": "20261221",
+      "word": "tomar el pelo",
+      "phonetic": "toh-MAR el PEH-loh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to pull someone's leg; to tease. Messing with you for fun.",
+          "connotation": "social / playful",
+          "images": [],
+          "examples": [
+            {
+              "es": "¿Me estás tomando el pelo o es verdad?",
+              "en": "Are you pulling my leg or is it true?",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261222": {
+      "date": "20261222",
+      "word": "no tener pelos en la lengua",
+      "phonetic": "noh teh-NEHR PEH-lohs en lah LEN-gwah",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to not mince words; to be blunt. Saying exactly what you think.",
+          "connotation": "everyday / blunt",
+          "images": [],
+          "examples": [
+            {
+              "es": "Ella no tiene pelos en la lengua; te lo dice directo.",
+              "en": "She doesn't mince words; she tells you straight.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261223": {
+      "date": "20261223",
+      "word": "estar harto",
+      "phonetic": "es-TAR AR-toh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to be fed up; to be sick of it. Done with the nonsense.",
+          "connotation": "emotional / frustrated",
+          "images": [],
+          "examples": [
+            {
+              "es": "Estoy harto de esa misma excusa.",
+              "en": "I'm fed up with that same excuse.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261224": {
+      "date": "20261224",
+      "word": "tener ganas de",
+      "phonetic": "teh-NEHR GAH-nahs deh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to feel like; to want to. That itch to do something.",
+          "connotation": "everyday / desire",
+          "images": [],
+          "examples": [
+            {
+              "es": "Tengo ganas de un café bien fuerte.",
+              "en": "I feel like a really strong coffee.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261225": {
+      "date": "20261225",
+      "word": "pasarlo bien",
+      "phonetic": "pah-SAHR-loh BYEN",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to have a good time. Enjoying yourself — simple as that.",
+          "connotation": "social / positive",
+          "images": [],
+          "examples": [
+            {
+              "es": "Que lo pasen bien en la Navidad.",
+              "en": "Have a good time this Christmas.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261226": {
+      "date": "20261226",
+      "word": "dejar plantado",
+      "phonetic": "deh-HAR plan-TAH-doh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to stand someone up. Not showing when you said you would.",
+          "connotation": "social / rude",
+          "images": [],
+          "examples": [
+            {
+              "es": "Me dejó plantado en el restaurante una hora.",
+              "en": "He stood me up at the restaurant for an hour.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261227": {
+      "date": "20261227",
+      "word": "echarle ganas",
+      "phonetic": "eh-CHAR-leh GAH-nahs",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to give it your all; to put in the effort. Showing up with energy.",
+          "connotation": "everyday / effort",
+          "images": [],
+          "examples": [
+            {
+              "es": "Échale ganas al entrenamiento y vas a ver resultados.",
+              "en": "Give the workout your all and you'll see results.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261228": {
+      "date": "20261228",
+      "word": "salir adelante",
+      "phonetic": "sah-LEER ah-deh-LAN-teh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to get ahead; to make it through. Pushing forward despite the mess.",
+          "connotation": "everyday / resilient",
+          "images": [],
+          "examples": [
+            {
+              "es": "Con esfuerzo vamos a salir adelante.",
+              "en": "With effort we're going to make it through.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261229": {
+      "date": "20261229",
+      "word": "valer la pena",
+      "phonetic": "vah-LEHR lah PEH-nah",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to be worth it. The payoff justifies the work.",
+          "connotation": "everyday / worth",
+          "images": [],
+          "examples": [
+            {
+              "es": "El viaje valió la pena aunque fue largo.",
+              "en": "The trip was worth it even though it was long.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261230": {
+      "date": "20261230",
+      "word": "estar al tanto",
+      "phonetic": "es-TAR al TAN-toh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to be in the loop; to stay informed. Knowing what's going on.",
+          "connotation": "everyday / aware",
+          "images": [],
+          "examples": [
+            {
+              "es": "Mantente al tanto de los cambios en el plan.",
+              "en": "Stay in the loop about changes to the plan.",
+              "source": "example.txt"
+            }
+          ]
+        }
+      ]
+    },
+    "20261231": {
+      "date": "20261231",
+      "word": "despedirse",
+      "phonetic": "des-peh-DEER-seh",
+      "audio": [],
+      "definitions": [
+        {
+          "definition": "to say goodbye; to take your leave. Closing the year — and the conversation.",
+          "connotation": "everyday / farewell",
+          "images": [],
+          "examples": [
+            {
+              "es": "Antes de irme me quiero despedir de todos.",
+              "en": "Before I go I want to say goodbye to everyone.",
               "source": "example.txt"
             }
           ]
